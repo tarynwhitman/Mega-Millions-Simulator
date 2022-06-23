@@ -21,6 +21,14 @@ public class SimulationController {
         int winningMatchAmount = WinningServices.checkWhiteBalls(winBalls, playBalls);
         mav.addObject("winMatches",winningMatchAmount);
 
+        int playMega = DrawingServices.getMegaBall();
+        int winMega = DrawingServices.getMegaBall();
+        mav.addObject("winMega", winMega);
+        mav.addObject("playMega", playMega);
+        Boolean winMegaCheck = WinningServices.checkMegaBall(winMega, playMega);
+        mav.addObject("winMegaMatch", winMegaCheck);
+
+
 
         mav.addObject("sim", "This is the simulation");
         return mav;
