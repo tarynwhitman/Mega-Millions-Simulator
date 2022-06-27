@@ -1,25 +1,82 @@
 {{>header}}
-{{sim}}
-<div>
-    Drawing winning FIVE: {{#winBalls}}
-    {{.}}
-    {{/winBalls}}
+
+<div class="absolute w-full">
+    <div class="my-2.5 py-5 max-w-xl m-auto grad rounded-xl shadow-lg flex items-center space-x-4 text-center">
+        <div class="justify-center m-auto">
+            <table class="border-separate border-dashed border-spacing-2 border border-white text-white">
+                <thead>
+                <tr>
+                    <th>Ways To Win</th>
+                    <th>Percentages</th>
+                    <th>Amounts Won</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Just Mega</td>
+                    <td>{{winPercenPos0}}</td>
+                    <td>{{winAmountPos0}}</td>
+                </tr>
+                <tr>
+                    <td>One White and Mega</td>
+                    <td>{{winPercenPos1}}</td>
+                    <td>{{winAmountPos1}}</td>
+                </tr>
+                <tr>
+                    <td>Two White and Mega</td>
+                    <td>{{winPercenPos2}}</td>
+                    <td>{{winAmountPos2}}</td>
+                </tr>
+                <tr>
+                    <td>Three White</td>
+                    <td>{{winPercenPos3}}</td>
+                    <td>{{winAmountPos3}}</td>
+                </tr>
+                <tr>
+                    <td>Three White and Mega</td>
+                    <td>{{winPercenPos4}}</td>
+                    <td>{{winAmountPos4}}</td>
+                </tr>
+                <tr>
+                    <td>Four White</td>
+                    <td>{{winPercenPos5}}</td>
+                    <td>{{winAmountPos5}}</td>
+                </tr>
+                <tr>
+                    <td>Four White and Mega</td>
+                    <td>{{winPercenPos6}}</td>
+                    <td>{{winAmountPos6}}</td>
+                </tr>
+                <tr>
+                    <td>Five White</td>
+                    <td>{{winPercenPos7}}</td>
+                    <td>{{winAmountPos7}}</td>
+                </tr>
+                <tr>
+                    <td>Jackpot</td>
+                    <td>{{winPercenPos8}}</td>
+                    <td>{{winAmountPos8}}</td>
+                </tr>
+                <tr>
+                    <td>Overall</td>
+                    <td>{{winPercenPos9}}</td>
+                    <td>{{winAmountPos9}}</td>
+                </tr>
+                </tbody>
+            </table>
+            <div class=" pt-5">
+                <button class="border-2 border-white p-2 px-4 rounded-xl font-extralight text-white" onclick="runHome()">Try Again</button>
+            </div>
+        </div>
+    </div>
 </div>
-<div>
-    Drawing ticket FIVE: {{#playBalls}}
-    {{.}}
-    {{/playBalls}}
-</div>
-<div>
-    Amount of Wins: {{winMatches}}
-</div>
-<div>
-    Winning Mega: {{winMega}}
-</div>
-<div>
-    Ticket Mega: {{playMega}}
-</div>
-<div>
-    Ticket Mega: {{winMegaMatch}}
-</div>
+
+<br>
+<script>
+    function runHome(){
+        window.location = "http://localhost:8086"
+    }
+</script>
+
+
 {{>footer}}

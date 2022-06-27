@@ -3,6 +3,7 @@ package com.example.megaMillions.services;
 import java.util.ArrayList;
 
 public class DrawingServices {
+
     public static ArrayList getWhiteBalls(){
         ArrayList balls = new ArrayList<>();
             while(balls.size() < 5) {

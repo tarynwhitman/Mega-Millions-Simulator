@@ -1,12 +1,41 @@
 {{>header}}
 
-<script>
-function runSimulation(){
-    window.location = "http://localhost:8085/simulation"
-}
-</script>
-Hey! We are at the Home Page
-<a href="http://localhost:8085/simulation">run simulation</a>
-<button onclick="runSimulation()">run simulation</button>
+<!--<h1>Welcome to Mega Millions Simulator!</h1>-->
+<!--<h4>Want to see your chances of winning?</h4>-->
+<!--<form action="/runSimulation" method="post">-->
+<!--    <label>How many days would you like to play?</label>-->
+<!--    <br>-->
+<!--    <input name="numOfDays" type="text">-->
+<!--    <br><br>-->
+<!--    <label>How many tickets would you like to buy everyday?</label>-->
+<!--    <br>-->
+<!--    <input name="numOfTickets" type="text">-->
+<!--    <br><br>-->
+<!--    <button type="submit">Submit</button>-->
+<!--</form>-->
+
+
+<div class="absolute w-full">
+    <div class="mt-10 py-10 max-w-xl m-auto grad rounded-xl shadow-lg flex items-center space-x-4 text-center">
+        <div class="justify-center m-auto">
+            <div class="text-3xl font-extralight text-white">Welcome to Mega Millions Simulator</div>
+            <br>
+            <form action="/runSimulation" method="post">
+                <label class="text-white text-sm font-bold">How many days would you like to play?</label>
+                <br>
+                <input class="px-1.5 text-slate-500 " name="numOfDays" type="number">
+                <br>
+                <br>
+                <label class="text-white text-sm font-bold">How many tickets would you like to buy everyday?</label>
+                <br>
+                <input class="px-1.5 text-slate-500" name="numOfTickets" type="text">
+                <br>
+                <br>
+                <button class="border-2 border-white p-2 px-4 rounded-xl font-extralight text-white" type="submit">Submit</button>
+            </form>
+        </div>
+</div>
+
+
 
 {{>footer}}
