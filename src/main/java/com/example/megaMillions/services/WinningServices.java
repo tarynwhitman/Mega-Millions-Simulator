@@ -13,4 +13,8 @@ public class WinningServices {
         }
         return counter;
     }
+
+    public static Boolean checkMegaBall(int winMega, int playMega){
+        return winMega == playMega;
+    }
 }
